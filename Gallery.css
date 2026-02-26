@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    height: 100px;
+}
+
+
+.logo img{
+    width: 16em;
+    position: absolute;
+    top: -5em;
+    left: 0em;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+nav ul li a:hover{
+    color: blue;
+}
+
+.menu-icon{
+    display: none;
+}
+.menu-icon:hover i {
+    color: blue;
+}
+
+.menu-icon i{
+    color: black;
+    font-size: 30px;
+}
+
+@media (max-width: 654px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: white;
+        gap: 0;
+        overflow: hidden;
+        z-index: 1; /* Add this line to ensure the menu appears above the carousel */
+    }
+    nav ul li {
+        padding: 20px;
+        padding-top: 0;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menuList {
+        transition: all 0.5s;
+    }
+    nav ul li:hover{
+        color: blue;
+    }
+
+}
+
+
+.contact-us {
+    background-color: rgba(255, 215, 0, 0.9); /* Light grey background */
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center; /* Center align the content */
+}
+
+.contact-us h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info a, .contact-info p {
+    display: block; /* Each item on its own line */
+    margin: 10px 0; /* Add some space between items */
+    color: #333; /* Dark color for text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.contact-us h2 {
+    font-weight: bold; /* Make the text bold */
+}
+
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between items */
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery-item {
+    flex: 1 1 300px; /* Increased from 200px to 250px */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the area well */
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Moves the item up on hover */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 60%; /* Reduced width */
+    max-width: 340px; /* Reduced max-width */
+    height: 76%;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
